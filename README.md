@@ -6,8 +6,9 @@
 * [Output](#output)
 
 ## Output
-(Picture of the output)[assets/UTIL2000Output1.png]
-(Second picture of the output)[assets/UTIL2000Output2.png]
+![Picture of the output](assets/UTIL2000Output1.png)
+---
+![Second picture of the output](assets/UTIL2000Output2.png)
 
 ## Author
 * [Violet French](https://github.com/Pirategirl9000/)
