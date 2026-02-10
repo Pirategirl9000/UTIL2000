@@ -4,7 +4,7 @@
       *  Programmer.: Violet French                                     00040001
       *  Date.......: 2.10.2026                                         00050001
       *  GitHub URL.: https://github.com/Pirategirl9000/UTIL2000/       00060001
-      *  Description:                                                   00070001
+      *  Description: This program uses pred                            00070002
       ***************************************************************** 00080001
        DATA DIVISION.                                                   00090001
        WORKING-STORAGE SECTION.                                         00100001
@@ -26,6 +26,15 @@
            05  WS-C1-KWH            PIC 9(5)    VALUE 350.              00260001
            05  WS-C1-FEE            PIC 9(3)V99 VALUE 14.95.            00270001
                                                                         00280001
+       01  WS-CUST2.                                                    00281002
+           05  WS-C2-NAME           PIC X(12)   VALUE 'CUST-BRAVO  '.   00282002
+           05  WS-C2-KWH            PIC 9(5)    VALUE 925.              00283002
+           05  WS-C2-FEE            PIC 9(3)V99 VALUE 14.95.            00284002
+                                                                        00285002
+       01  WS-CUST3.                                                    00286002
+           05  WS-C3-NAME           PIC X(12)   VALUE 'CUST-CHARLIE'.   00287002
+           05  WS-C3-KWH            PIC 9(5)    VALUE 1350.             00288002
+           05  WS-C3-FEE            PIC 9(3)V99 VALUE 14.95.            00289002
       ***************************************************************** 00290001
       * CURRENT "INPUT" FIELDS (LOADED PER CUSTOMER)                    00300001
       ***************************************************************** 00310001
