@@ -75,13 +75,19 @@
       ***************************************************************** 00640001
        000-MAIN.                                                        00650001
            DISPLAY '********************************'.                  00660001
-           DISPLAY '*** UTIL1000 - CUSTOMER BILL ***'.                  00670001
+           DISPLAY '*** UTIL2000 - CUSTOMER BILL ***'.                  00670006
            DISPLAY '********************************'.                  00680001
            DISPLAY ' '.                                                 00690001
                                                                         00700001
            PERFORM 500-LOAD-CUST1.                                      00710005
            PERFORM 600-RUN-BILL.                                        00720001
                                                                         00730001
+           PERFORM 510-LOAD-CUST2.                                      00731006
+           PERFORM 600-RUN-BILL.                                        00732006
+                                                                        00733006
+           PERFORM 520-LOAD-CUST3.                                      00734006
+           PERFORM 600-RUN-BILL.                                        00735006
+                                                                        00736006
            STOP RUN.                                                    00740001
                                                                         00750001
       ***************************************************************** 00760001
@@ -165,8 +171,15 @@
            COMPUTE WS-TIER1-CHARGE ROUNDED =                            01440001
                WS-TIER1-KWH * WS-RATE-TIER1.                            01450001
                                                                         01460001
-           COMPUTE WS-SUBTOTAL = WS-TIER1-CHARGE.                       01470001
-                                                                        01480001
+           COMPUTE WS-TIER2-CHARGE ROUNDED =                            01461006
+               WS-TIER2-KWH * WS-RATE-TIER2.                            01462006
+                                                                        01463006
+           COMPUTE WS-TIER3-CHARGE ROUNDED =                            01464006
+               WS-TIER3-KWH * WS-RATE-TIER3.                            01465006
+                                                                        01466006
+           COMPUTE WS-SUBTOTAL = WS-TIER1-CHARGE + WS-TIER2-CHARGE +    01470006
+               WS-TIER3-CHARGE.                                         01480006
+                                                                        01482006
            COMPUTE WS-TOTAL-BILL =                                      01490001
                WS-SUBTOTAL + WS-SERVICE-FEE.                            01500001
                                                                         01510001
