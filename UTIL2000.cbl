@@ -4,7 +4,9 @@
       *  Programmer.: Violet French                                     00040001
       *  Date.......: 2.10.2026                                         00050001
       *  GitHub URL.: https://github.com/Pirategirl9000/UTIL2000/       00060001
-      *  Description: This program uses pred                            00070002
+      *  Description: This program uses predetermined values to calculat00070003
+      *              -e three customer's utility bills based on their   00071003
+      *               Kilowatt hours and the fee for their power bill   00072003
       ***************************************************************** 00080001
        DATA DIVISION.                                                   00090001
        WORKING-STORAGE SECTION.                                         00100001
@@ -119,7 +121,7 @@
       *                                                                 01100001
       * These are the per-kWh rates:                                    01110001
       * - Tier 1: first 500 kWh at $0.12/kWh                            01120001
-      * - Tier 2: next 500 kWh (kWh 5011000) at $0.15/kWh              01130001
+      * - Tier 2: next 500 kWh (kWh 501 1000) at $0.15/kWh              01131003
       * - Tier 3: any kWh above 1000 at $0.18/kWh                       01140001
       ***************************************************************** 01150001
        200-CALC-TIERS.                                                  01160001
