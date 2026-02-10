@@ -4,9 +4,9 @@
       *  Programmer.: Violet French                                     00040001
       *  Date.......: 2.10.2026                                         00050001
       *  GitHub URL.: https://github.com/Pirategirl9000/UTIL2000/       00060001
-      *  Description: This program uses predetermined values to calculat00070003
-      *              -e three customer's utility bills based on their   00071003
-      *               Kilowatt hours and the fee for their power bill   00072003
+      *  Description: This program uses predetermined values to         00070004
+      *               calculate three customers' bills based on         00071004
+      *               their KwH and the fee per KwH                     00071104
       ***************************************************************** 00080001
        DATA DIVISION.                                                   00090001
        WORKING-STORAGE SECTION.                                         00100001
