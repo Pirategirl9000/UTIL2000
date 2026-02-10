@@ -79,7 +79,7 @@
            DISPLAY '********************************'.                  00680001
            DISPLAY ' '.                                                 00690001
                                                                         00700001
-           PERFORM 500-LOAD-CUST.                                       00710001
+           PERFORM 500-LOAD-CUST1.                                      00710005
            PERFORM 600-RUN-BILL.                                        00720001
                                                                         00730001
            STOP RUN.                                                    00740001
@@ -87,11 +87,21 @@
       ***************************************************************** 00760001
       * MOVE name/kwh/fee from CUST into current fields.                00770001
       ***************************************************************** 00780001
-       500-LOAD-CUST.                                                   00790001
+       500-LOAD-CUST1.                                                  00790005
            MOVE WS-C1-NAME TO WS-CUST-NAME.                             00800001
            MOVE WS-C1-KWH  TO WS-KWH-USED.                              00810001
            MOVE WS-C1-FEE  TO WS-SERVICE-FEE.                           00820001
                                                                         00830001
+       510-LOAD-CUST2.                                                  00831005
+           MOVE WS-C2-NAME TO WS-CUST-NAME.                             00832005
+           MOVE WS-C2-KWH  TO WS-KWH-USED.                              00833005
+           MOVE WS-C2-FEE  TO WS-SERVICE-FEE.                           00834005
+                                                                        00835005
+       520-LOAD-CUST3.                                                  00836005
+           MOVE WS-C3-NAME TO WS-CUST-NAME.                             00837005
+           MOVE WS-C3-KWH  TO WS-KWH-USED.                              00838005
+           MOVE WS-C3-FEE  TO WS-SERVICE-FEE.                           00839005
+                                                                        00839105
       ***************************************************************** 00840001
       * BILL ROUTINE                                                    00850001
       ***************************************************************** 00860001
