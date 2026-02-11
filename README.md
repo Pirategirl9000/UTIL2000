@@ -38,4 +38,23 @@ This program uses three predefined users and calculates their utility bill based
     * `WS-CUST-NAME`   - Stores the name of the customer
     * `WS-KWH-USED`    - Stores the Kilowatt hours
     * `WS-SERVICE-FEE` - Stores the service fee
+* Work Areas
+  * These are different items used to store the results of the calculations
+  * Data Items
+    * `WS-TIER1-KWH`    - The first 500 kWh used by the customer priced at $0.12/kWh
+    * `WS-TIER2-KWH`    - Next 500 kWh used by the customer priced at $0.15/kWh
+    * `WS-TIER3-KWH`    - Any kWH beyond the first 1000 at priced at $0.18/kWh
+   
+    * `WS-TIER1-CHARGE` - The amount being charged as tier 1 rates 
+    * `WS-TIER2-CHARGE` - The amount being charged as tier 2 rates
+    * `WS-TIER3-CHARGE` - The amount being charged as tier 3 rates
+ 
+    * `WS-SUBTOTAL`     - The subtotal to this customer (charges without the service fee)
+    * `WS-TOTAL-BILL`   - The total charged to this customer (charges with service fee)
+* Formatted Fields
+  * These items are used for outputting the different values in a formatted way by moving calculated items to here
+  * Data Items
+    * `WS-KWH-USED-ED` - The kWh used formatted
+    * `WS-MONEY-ED`    - Used for displaying the service fee and the different tiers of charges formatted
+    * `WS-MONEY-ED2`   - Used for displaying the total bill formatted
 ### Paragraphs
