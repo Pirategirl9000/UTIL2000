@@ -79,6 +79,7 @@
            DISPLAY '********************************'.                  00680001
            DISPLAY ' '.                                                 00690001
                                                                         00700001
+           *> Load each customer in then run their bill                 00701007
            PERFORM 500-LOAD-CUST1.                                      00710005
            PERFORM 600-RUN-BILL.                                        00720001
                                                                         00730001
@@ -112,6 +113,7 @@
       * BILL ROUTINE                                                    00850001
       ***************************************************************** 00860001
        600-RUN-BILL.                                                    00870001
+           *> Delegate work to different paragraphs                     00871007
            PERFORM 100-INITIALIZE.                                      00880001
            PERFORM 200-CALC-TIERS.                                      00890001
            PERFORM 300-CALC-CHARGES.                                    00900001
