@@ -58,3 +58,42 @@ This program uses three predefined users and calculates their utility bill based
     * `WS-MONEY-ED`    - Used for displaying the service fee and the different tiers of charges formatted
     * `WS-MONEY-ED2`   - Used for displaying the total bill formatted
 ### Paragraphs
+* `000-MAIN`
+  * Serves as the main entry point for the program
+  * Steps
+    1. Displays the bill header
+    2. Loads a customer's data using the respective paragraph
+    3. Performs 600-RUN-BILL to delegate the calculations and output elsewhere
+    4. Repeats steps b & c until there are no more customers
+* Customer Load Paragraphs
+  * `500-LOAD-CUST1`, `510-LOAD-CUST2`, `520-LOAD-CUST3`
+  * These paragraphs load each respective customer into the current input fields to allow for calculations to be done
+  * Data Loaded ('#' indicates the customer's number)
+    * `WS-C#-NAME` -> `WS-CUST-NAME`
+    * `WS-C#-KWH`  -> `WS-KWH-USED`
+    * `WS-C#-FEE`  -> `WS-SERVICE-FEE`
+* `600-RUN-BILL`
+  * Delegates the work of creating the bill to different paragraphs
+  * Different Paragraphs Performed
+    * `100-INITIALIZE`      - Sets all work area data items to 0
+    * `200-CALC-TIERS`      - Calculates the kWh used in each tier
+    * `300-CALC-CHARGES`    - Calculates the charges based on the kWh used in each tier
+    * `400-DISPLAY-RESULTS` - Display the results of the calculations
+* `100-INITIALIZE`
+  * Sets all the data items used for work calculations to 0 to get things ready for calculation
+  * Items set to zero
+    * `WS-TIER1-KWH`
+    * `WS-TIER2-KWH`
+    * `WS-TIER3-KWH`
+    * `WS-TIER1-CHARGE`
+    * `WS-TIER2-CHARGE`
+    * `WS-TIER3-CHARGE`
+    * `WS-SUBTOTAL`
+    * `WS-TOTAL-BILL`
+* `200-CALC-TIERS`
+  * Calculates the total kWh used in each tier, different tiers get charged a different amount per kWh
+  * Tiers
+    * Tier 1: 0-500
+    * Tier 2: 500-1000
+    * Tier 3: 1000+
+  * Stores the results of these calculations to `WS-TIER#-KWH` ('#' denotes the tier number)
