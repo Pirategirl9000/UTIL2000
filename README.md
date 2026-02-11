@@ -7,6 +7,7 @@
 * [Purpose](#purpose)
 * [Script Breakdown](#script-breakdown)
 * [Output](#output)
+* [Credits](#credits)
 
 ## Output
 ![Picture of the output](assets/UTIL2000Output1.png)
@@ -110,3 +111,6 @@ This program uses three predefined users and calculates their electricity bill b
   * Displays the results of the calculations using the formatted fields by moving each calculated value to a formatted data item
   * Display the customer name, kWh used, service fee, each tier's charge, and the total bill (assessed with the service fee included)
   * [View Example Output](#output)
+
+## Credits
+This script was an adaptation of a script provided by [Debbie Johnson](https://github.com/dejohns2)
