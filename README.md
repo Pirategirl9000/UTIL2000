@@ -103,3 +103,7 @@ This program uses three predefined users and calculates their utility bill based
       * $Charge_n  \approx kWh_n * Rate_n$
       * $Subtotal = Charge_1 + ... + Charge_n$
       * $Total = Subtotal + ServiceFee$
+* `400-DISPLAY-RESULTS`
+  * Displays the results of the calculations using the formatted fields by moving each calculated value to a formatted data item
+  * Display the customer name, kWh used, service fee, each tier's charge, and the total bill (assessed with the service fee included)
+  * [View Example Output](#output)
