@@ -97,3 +97,9 @@ This program uses three predefined users and calculates their utility bill based
     * Tier 2: 500-1000
     * Tier 3: 1000+
   * Stores the results of these calculations to `WS-TIER#-KWH` ('#' denotes the tier number)
+* `300-CALC-CHARGES`
+  * Calculates the amount charged per tier, the subtotal, and the total
+    * Calculating the amount charged for each tier where n=tier number
+      * $Charge_n  \approx kWh_n * Rate_n$
+      * $Subtotal = Charge_1 + ... + Charge_n$
+      * $Total = Subtotal + ServiceFee$
