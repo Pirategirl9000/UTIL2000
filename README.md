@@ -15,7 +15,7 @@
 
 
 ## Purpose
-This program uses three predefined users and calculates their electricity bill based on their kWh usage then displays it to SYSOUT. For more detailed description refer to the paragraphs outlined in the [Script Breakdown](#script-breakdonw)
+This program uses three predefined users and calculates their electricity bill based on their kWh usage then displays it to SYSOUT. For more detailed description refer to the paragraphs outlined in the [Script Breakdown](#script-breakdown)
 
 ## Script Breakdown
 ### Data Items
