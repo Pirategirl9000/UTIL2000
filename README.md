@@ -1,12 +1,12 @@
 # UTIL2000
+## Author
+* [Violet French](https://github.com/Pirategirl9000/)
+
 ## Table of Contents
 * [Author](#author)
 * [Purpose](#purpose)
 * [Script Breakdown](#script-breakdown)
 * [Output](#output)
-
-## Author
-* [Violet French](https://github.com/Pirategirl9000/)
 
 ## Output
 ![Picture of the output](assets/UTIL2000Output1.png)
