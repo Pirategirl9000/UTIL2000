@@ -15,7 +15,8 @@
 
 
 ## Purpose
-This program uses three predefined users and calculates their utility bill based on three different tiers of electricity consumption. It then displays these results to the SYSOUT
+This program uses three predefined users and calculates their electricity bill based on their kWh usage then displays it to SYSOUT. For more detailed description refer to the paragraphs outlined in the [Script Breakdown](#script-breakdonw)
+
 ## Script Breakdown
 ### Data Items
 * Constants
